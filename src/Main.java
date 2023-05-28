@@ -10,26 +10,33 @@ public class Main {
     public static void task1 () {
         System.out.println("Задача1");
         int clientOS = 1;
-        if (clientOS == 0) {
+        int iOs = 0;
+        int android = 1;
+        if (clientOS == iOs) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else {
+        } else if (clientOS == android){
             System.out.println("Установите версию приложения для Android по ссылке");
+        } else {
+            System.out.println("У вас другая операционная система");
         }
     }
     public static void task2 () {
         System.out.println("Задача2");
-        int clientOS = 0;
-        int clientDeviceYear = 2014;
-        if (clientOS == 0 && clientDeviceYear >= 2015) {
+        int clientOS = 3;
+        int clientDeviceYear = 2015;
+        int iOs = 0;
+        int android = 1;
+        int checkYear = 2015;
+        if (clientOS == iOs && clientDeviceYear >= checkYear) {
             System.out.println("Установите обычную версию приложения для iOS по ссылке");
-        } else if (clientDeviceYear < 2015) {
-            System.out.println("Установите облегчённую версию приложения для iOS по ссылке");
-        } else if (clientOS == 1 && clientDeviceYear >= 2015){
-            System.out.println("Установите обычную версию приложения для Android по ссылке");
-        } else if (clientDeviceYear < 2015) {
-            System.out.println("Установите облегчённую версию приложения для Android по ссылке");
+        } else if (clientOS == iOs && clientDeviceYear <= checkYear){
+            System.out.println("Установите упрощённую версию приложения для iOS по ссылке");
+        } else if (clientOS == android && clientDeviceYear >= checkYear) {
+            System.out.println("Установите обычную версию приложения для android по ссылке");
+        } else if (clientOS == android && clientDeviceYear <= checkYear)  {
+            System.out.println("Установите упрощённую версию приложения для android по ссылке");
         } else {
-            System.out.println("Установите обычную версию приложения для Android по ссылке");
+            System.out.println("У вас другая операционная система");
         }
     }
     public static void task3 () {
@@ -43,16 +50,14 @@ public class Main {
     }
     public static void task4 () {
         System.out.println("Задача4");
-        byte deliveryDistance = 1;
+        byte deliveryDistance = 59;
         byte numberOfDays = 1;
-        byte numberOfDays2 = 2;
-        byte numberOfDays3 = 3;
         if (deliveryDistance < 20) {
             System.out.println("Потребуется дней: " + numberOfDays);
         } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
-            System.out.println("Потребуется дней: " + numberOfDays2);
+            System.out.println("Потребуется дней: " + (numberOfDays + 1));
         } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
-            System.out.println("Потребуется дней: " + numberOfDays3);
+            System.out.println("Потребуется дней: " + (numberOfDays + 2));
         } else {
             System.out.println("Доставки нет");
         }
