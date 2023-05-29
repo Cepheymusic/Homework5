@@ -29,11 +29,11 @@ public class Main {
         int checkYear = 2015;
         if (clientOS == iOs && clientDeviceYear >= checkYear) {
             System.out.println("Установите обычную версию приложения для iOS по ссылке");
-        } else if (clientOS == iOs && clientDeviceYear <= checkYear){
+        } else if (clientOS == iOs && clientDeviceYear < checkYear){
             System.out.println("Установите упрощённую версию приложения для iOS по ссылке");
         } else if (clientOS == android && clientDeviceYear >= checkYear) {
             System.out.println("Установите обычную версию приложения для android по ссылке");
-        } else if (clientOS == android && clientDeviceYear <= checkYear)  {
+        } else if (clientOS == android && clientDeviceYear < checkYear)  {
             System.out.println("Установите упрощённую версию приложения для android по ссылке");
         } else {
             System.out.println("У вас другая операционная система");
